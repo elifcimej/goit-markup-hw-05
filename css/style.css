@@ -134,7 +134,7 @@ img{
     letter-spacing: 0.02em;
     color: #434455;
     text-decoration: none;
-  
+
 }
 
 .address {
@@ -147,7 +147,7 @@ img{
     display: flex;
     gap: 40px;
     margin-left: auto;
-    
+
 }
 
 .address ul li:first-child a:hover {
@@ -228,7 +228,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;   
+    margin-bottom: 8px;
 }
 .visually-hidden {
     position: absolute;
@@ -429,7 +429,203 @@ img{
     opacity: 1;
     visibility: visible;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+
+}
+
+.modal {
+    background-color: #2E2F4240;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+}
+
+.modal-container {
+    background-color: #fcfcfc;
+    width: 408px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px #00000033;
+    margin: 0 auto;
+    padding: 0 24px 24px 24px;
+}
+
+.modal-form {
+    margin: 0 auto;
+    width: 360px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-div {
+    align-items: center;
+    justify-content: center;
+}
+
+.close-icon {
+    width: 24px;
+    height: 24px;
+    margin: 24px 24px 24px 336px;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    --color3: #404bbf;
+    --color4: #fff;
+}
+
+.modal-title {
+    text-align: center;
+    font-family: "Roboto" sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1, 5em;
+    color: #2E2F42;
+    margin-bottom: 16px;
+}
+
+.form-label {
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+    color: #8e8f99;
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #2a2f4240;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    padding-left: 38px;
+    font-size: 12px;
+}
+
+#form-comment {
+    border: 1px solid #2a2f4240;
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-left: 16px;
+    font-size: 12px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus,
+#form-comment:focus {
+    border: 1px solid #4d5ae5;
+    outline: none;
+    fill: #ffffff;
+}
+
+textarea::placeholder,
+.modal-input::placeholder {
+    color: #2e2f4240;
+    font-family: "roboto" sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.modal-div {
+    position: relative;
+}
+
+.form-icon {
+    width: 18px;
+    height: 24px;
+    position: absolute;
+    left: 16px;
+    top: 57%;
+    fill: #2e2f42;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus+.form-icon {
+    --color5: #4d5ae5;
+}
+
+.form-icon:focus {
+    --color5: #4D5AE5;
+}
+
+.checkbox {
+    margin-bottom: 24px;
+}
+
+.checkbox-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.span-checkbox {
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.checkbox:checked+.checkbox-label>.span-checkbox {
+    fill: #f4f4fd;
+    border: none;
+    background-color: #404BBF;
+}
+
+.checkbox:focus+.checkbox-label>.span-checkbox {
+    border-color: #404BBF;
+}
+
+.span-checkbox {
+    margin-bottom: 24px;
+}
+
+#submit-button {
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: #4d5ae5;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Roboto" sans-serif;
+    line-height: 1.5em;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+#submit-button:hover,
+#submit-button:focus {
+    background-color: #404BBF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+::placeholder :focus-within {
+    color: #4D5AE5;
+    border-color: #4D5AE5;
 }
 
 .title-app {
@@ -443,7 +639,70 @@ img{
 
 .text-p {
     letter-spacing: 0.02em;
+
+}
+.form-subscribe{
+    display: block;
+    margin-bottom: 16px;
+    width: 264px;
+}
+.subscribe {
+    width: 453px;
+    display: inline-block;
+    align-items: flex-start;
+    margin-left: 60px;
+}
+.sub-form-label{
+    display: block;
+    margin-bottom: 16px;
+    width: 264px;
+    color: #FFFFFF;
+
     
+}
+#sub-email{
+    width: 264px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: #ffffff;
+    margin-top: 16px;
+}
+.sub-submit{
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 165px;
+    height: 40px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    background: #4d5ae5;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 16px;
+}
+
+.send-icon{
+    margin-left: 16px;
+}
+
+#sub-email::placeholder {
+    color: #ffffff;
 }
 
 footer {
@@ -458,6 +717,7 @@ footer {
     justify-content: center;
     text-align: right;
     margin-left: 208px;
+    
 }
 .footer-sm-text{
     color: #FFFFFF;
@@ -468,13 +728,13 @@ footer {
     padding-bottom: 100px;
     margin-top: -110px;
     font-weight: 500;
-    
+
 }
 .footer-icon-list{
     display: flex;
     justify-content: center;
     gap: 16px;
-    
+
     margin-left: -120px;
     margin-top: -80px;
 
@@ -517,3 +777,5 @@ footer {
     color: #F4F4FD;
     letter-spacing: 0.02em;
 }
+
+
