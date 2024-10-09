@@ -432,7 +432,7 @@ img{
 
 }
 
-.modal {
+/* .modal {
     background-color: #2E2F4240;
     position: fixed;
     top: 0;
@@ -440,11 +440,12 @@ img{
     width: 100%;
     height: 100%;
     padding-top: 80px;
-}
+} */
 
 .modal-container {
     background-color: #fcfcfc;
     width: 408px;
+    height: 584px;
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px #00000033;
     margin: 0 auto;
@@ -454,6 +455,7 @@ img{
 .modal-form {
     margin: 0 auto;
     width: 360px;
+    height: 58px;
     align-items: center;
     justify-content: center;
 }
@@ -470,6 +472,7 @@ img{
     align-items: center;
     justify-content: end;
     cursor: pointer;
+    border-radius: 1px solid #2a2f4240;
 }
 
 .close-icon:hover {
@@ -482,36 +485,43 @@ img{
     font-family: "Roboto" sans-serif;
     font-weight: 500;
     font-size: 16px;
+    font-style: normal;
     line-height: 1, 5em;
     color: #2E2F42;
     margin-bottom: 16px;
+    letter-spacing: 0,32px;
 }
 
 .form-label {
     display: block;
-    padding-bottom: 10px;
-    margin-bottom: 8px;
+    padding: auto;
+    margin: auto;
     color: #8e8f99;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14x;
+    /* 116.667% */
+    letter-spacing: 0.48px;
+    padding: 4px;
 }
 
 .modal-input {
-    width: 100%;
+    width: 360px;
     height: 40px;
     border: 1px solid #2a2f4240;
     border-radius: 4px;
-    width: 100%;
-    height: 40px;
     padding-left: 38px;
     font-size: 12px;
+    gap:8px;
+    flex-shrink: 0;
 }
 
 #form-comment {
     border: 1px solid #2a2f4240;
-    width: 100%;
+    width: 360px;
     height: 120px;
     border-radius: 4px;
-    padding-top: 8px;
-    padding-left: 16px;
     font-size: 12px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -528,7 +538,6 @@ textarea::placeholder,
     color: #2e2f4240;
     font-family: "roboto" sans-serif;
     font-weight: 400;
-    font-size: 12px;
 }
 
 .modal-div {
@@ -547,11 +556,17 @@ textarea::placeholder,
 }
 
 .modal-input:focus+.form-icon {
-    --color5: #4d5ae5;
-}
+    fill: var(--color5, #4d5ae5);
 
+}
+.close-icon{
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
 .form-icon:focus {
-    --color5: #4D5AE5;
+    fill: var(--color5, #2e2f42);
 }
 
 .checkbox {
@@ -641,23 +656,36 @@ textarea::placeholder,
     letter-spacing: 0.02em;
 
 }
+
+.deneme{
+    display: flex;
+}
+
 .form-subscribe{
-    display: block;
-    margin-bottom: 16px;
-    width: 264px;
+    display: flex;
+    align-items: end;
+    gap: 24px;
 }
 .subscribe {
     width: 453px;
     display: inline-block;
     align-items: flex-start;
     margin-left: 60px;
+
 }
 .sub-form-label{
     display: block;
     margin-bottom: 16px;
     width: 264px;
-    color: #FFFFFF;
-
+    color: var(--WHITE, #FFF);
+        /* Body Medium */
+        font-family: Roboto;
+        font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+        /* 150% */
+    letter-spacing: 0.32px;
     
 }
 #sub-email{
@@ -675,13 +703,11 @@ textarea::placeholder,
     margin-top: 16px;
 }
 .sub-submit{
-    display: inline-flex;
-    padding: 8px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
     width: 165px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -697,9 +723,6 @@ textarea::placeholder,
     margin-bottom: 16px;
 }
 
-.send-icon{
-    margin-left: 16px;
-}
 
 #sub-email::placeholder {
     color: #ffffff;
@@ -711,33 +734,31 @@ footer {
     height: auto;
 }
 
+.logo-text{
+    display: inline-block;
+    width: 264px;
+    margin-left: 120px;
+}
+
 .footer-sm{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    text-align: right;
-    margin-left: 208px;
+    display: inline-block;
+    margin-left: 120px;
     
 }
 .footer-sm-text{
     color: #FFFFFF;
     width: 96px;
     height: 24px;
-    margin: 32px;
+    /* margin: 32px; */
     max-width: 264px;
-    padding-bottom: 100px;
-    margin-top: -110px;
     font-weight: 500;
 
 }
 .footer-icon-list{
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
+    padding-top: 16px;
     gap: 16px;
-
-    margin-left: -120px;
-    margin-top: -80px;
-
 }
 .footer-icon-list li{
     list-style-type: none;
